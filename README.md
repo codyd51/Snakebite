@@ -10,5 +10,5 @@ Feel free to learn from Snakebite, but please provide attribution if you base yo
 Available for purchase on the BigBoss Cydia repository. Compatible with all devices running iOS 9.
 
 Interface                     | Settings 
-:----------------------------:|:-------------------------:
+:----------------------------:|:-----------------------------:
 ![Interface](/interface.PNG)  | ![Settings](/settings.PNG)
