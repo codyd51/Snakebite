@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.phillipt.snakebite</string>
+			<key>key</key>
+			<string>enabled</string>
+			<key>label</key>
+			<string>Enabled</string>
+			<key>PostNotification</key>
+			<string>com.phillipt.snakebite/prefsChanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.phillipt.snakebite</string>
+			<key>key</key>
+			<string>showAppLabels</string>
+			<key>label</key>
+			<string>Show App Labels</string>
+			<key>PostNotification</key>
+			<string>com.phillipt.snakebite/prefsChanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>If this switch is enabled, Snakebite will display your most recently used applications instead of your Favorites. The number of recent apps shown is set using the slider below.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSegmentCell</string>
+			<key>defaults</key>
+			<string>com.phillipt.snakebite</string>
+			<key>key</key>
+			<string>useMultitaskingMode</string>
+			<key>label</key>
+			<string>Mode</string>
+			<key>default</key>
+			<string>true</string>
+			<key>validTitles</key>
+			<array>
+				<string>Favorites</string>
+				<string>Recent Apps</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>false</string>
+				<string>true</string>
+			</array>
+			<key>id</key>
+			<string>ModeCell</string>
+			<key>PostNotification</key>
+			<string>com.phillipt.snakebite/prefsChanged</string>
+		</dict>
+		
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Number of apps shown</string>
+			<!--<key>footerText</key>
+			<string>We'll show 6 apps</string>-->
+			<key>id</key>
+			<string>SliderLabelCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+    		<key>cellClass</key>
+    		<string>SnakebiteDiscreteSliderTableCell</string>
+    		<key>default</key>
+    		<integer>6</integer>
+    		<key>defaults</key>
+    		<string>com.phillipt.snakebite</string>
+    		<key>key</key>
+    		<string>numApps</string>
+    		<key>label</key>
+    		<string>Number of apps shown</string>
+    		<key>max</key>
+    		<integer>8</integer>
+    		<key>min</key>
+    		<integer>1</integer>
+    		<key>isSegmented</key>
+    		<true/>
+    		<key>segmentCount</key>
+    		<integer>7</integer>
+    		<key>PostNotification</key>
+			<string>com.phillipt.snakebite/prefsChanged</string>
+			<key>id</key>
+			<string>AppsCountCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Blur style</string>
+			<key>footerText</key>
+			<string>Blur style for Snakebite's wallpaper</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSegmentCell</string>
+			<key>defaults</key>
+			<string>com.phillipt.snakebite</string>
+			<key>key</key>
+			<string>blurStyle</string>
+			<key>label</key>
+			<string>Blur style</string>
+			<key>default</key>
+			<string>25</string>
+			<key>validTitles</key>
+			<array>
+				<string>Light</string>
+				<string>Dark</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>25</string>
+				<string>13</string>
+				<!--<string>3</string>-->
+			</array>
+			<key>PostNotification</key>
+			<string>com.phillipt.snakebite/prefsChanged</string>
+		</dict>
+		
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>bundle</key>
+			<string>AppList</string>
+			<key>isController</key>
+			<string>1</string>
+			<key>label</key>
+			<string>Favorite Applications</string>
+			<key>ALAllowsSelection</key>
+			<string>1</string>
+			<key>ALChangeNotification</key>
+			<string>com.phillipt.snakebite/prefsChanged</string>
+			<key>ALSectionDescriptors</key>
+			<array>
+				<dict>
+					<key>cell-class-name</key>
+					<string>ALSwitchCell</string>
+					<key>icon-size</key>
+					<string>29</string>
+					<key>predicate</key>
+					<string>isSystemApplication = TRUE</string>
+					<key>suppress-hidden-apps</key>
+					<string>1</string>
+					<key>title</key>
+					<string>System Applications</string>
+				</dict>
+				<dict>
+					<key>cell-class-name</key>
+					<string>ALSwitchCell</string>
+					<key>icon-size</key>
+					<string>29</string>
+					<key>predicate</key>
+					<string>isSystemApplication = FALSE</string>
+					<key>suppress-hidden-apps</key>
+					<string>1</string>
+					<key>title</key>
+					<string>User Applications</string>
+				</dict>
+			</array>
+			
+			<key>ALSettingsKeyPrefix</key>
+			<string>fav-</string>
+			<key>ALSettingsPath</key>
+			<string>/var/mobile/Library/Preferences/com.phillipt.snakebite.plist</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Icons by @Oorenjiiiro
+Original concept designed with help from iFlames</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Snakebite</string>
+</dict>
+</plist>

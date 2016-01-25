@@ -1,0 +1,10 @@
+Package: org.thebigboss.snakebite
+Name: Snakebite
+Depends: mobilesubstrate
+Version: 1.0
+Icon: Snakebite.png
+Architecture: iphoneos-arm
+Description: A quick and beautiful way to access the apps you need most
+Maintainer: Phillip Tennen
+Author: Phillip Tennen
+Section: Tweaks

@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = Snakebite;
+	cell = PSLinkCell;
+	detail = SnakebiteListController;
+	icon = header_usable.png;
+	isController = 1;
+	label = Snakebite;
+    };
+}
