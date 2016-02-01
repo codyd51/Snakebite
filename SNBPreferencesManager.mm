@@ -11,8 +11,6 @@ static void preferencesChanged() {
     CFPreferencesAppSynchronize(CFSTR("com.phillipt.snakebite"));
 
     [[SNBPreferencesManager sharedManager] _preferencesChanged];
-
-    //enabled = [(id)CFPreferencesCopyAppValue(CFSTR("enabled"), CFSTR("org.thebigboss.cascade")) boolValue];
 }
 
 @implementation SNBPreferencesManager

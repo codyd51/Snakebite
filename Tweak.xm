@@ -36,11 +36,3 @@ SBIcon* iconForBundleIdentifier(NSString* bundleIdentifier) {
 	//}
 }
 %end
-/*
-%hook SBMainDisplaySceneManager
-- (void)_activateAppLink:(id)arg1 withAppLinkState:(id)arg2 transitionContext:(id)arg3 wasFromSpotlight:(_Bool)arg4 previousBreadcrumb:(id)arg5 {
-	%log;
-	%orig;
-}
-%end
-*/

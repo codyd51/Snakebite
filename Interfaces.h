@@ -102,7 +102,6 @@ static int const UITapticEngineFeedbackPop = 1002;
 -(id)initWithOrientation:(int)orientation variant:(int)variant;
 @end
 @interface MPUSystemMediaControlsViewController : UIViewController
-//-(id)initWithStyle:(int)style;
 @end
 @interface SBAppSwitcherModel : NSObject {
 	NSMutableArray *_recentDisplayItems;
@@ -119,11 +118,6 @@ static int const UITapticEngineFeedbackPop = 1002;
 -(void)addGestureRecognizer:(id)arg1 toDisplay:(id)arg2 ;
 -(void)removeGestureRecognizer:(id)arg1 fromDisplay:(id)arg2 ;
 @end
-/*
-@interface UIScreenEdgePanGestureRecognizer : UIPanGestureRecognizer
-@property (nonatomic, retain) NSInteger edges;
-@end
-*/
 
 OBJC_EXTERN UIImage *_UICreateScreenUIImage(void) NS_RETURNS_RETAINED;
 

@@ -98,8 +98,7 @@
 -(void)_touchEndedAtPoint:(CGPoint)point {
     for (SNBFavoritesMenuCellItem* cellItem in _cellItems) {
         CGRect convertedFrame = [self convertRect:cellItem.frame fromView:cellItem.superview];
-        //if (CGRectContainsPoint(convertedFrame, point)) {
-        //if (convertedFrame.origin.y - 10 < point.y && convertedFrame.origin.y + convertedFrame.size.height + 10 > point.y && convertedFrame.origin.x + convertedFrame.size.width + 10 > point.x) {
+
         if (cellItem.isHighlighted) {
             //found item they were touching
             NSString* bundleIdentifier = cellItem.bundleIdentifier;
